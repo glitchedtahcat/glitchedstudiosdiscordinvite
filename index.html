@@ -6,7 +6,7 @@
   <meta property="og:title" content="Join Glitched Studios" />
   <meta property="og:description" content="51 online • 191 members" />
   <meta property="og:image" content="https://example.com/glitched-studios-og-image.png" />
-  <meta property="og:url" content="https://discord.com/invite/your-invite-code" />
+  <meta property="og:url" content="https://discord.com/invite/glitched-studios" />
   <meta property="og:theme-color" content="#3498db" /> <!-- Discord's blue color -->
   <meta property="og:type" content="website" />
 </head>
@@ -45,13 +45,10 @@
     <div class="loading-animation"></div>
     <p>Please wait while we redirect you...</p>
   </div>
-<script>
-  fetch('https://cors-anywhere.herokuapp.com/https://pastebin.com/raw/Rxp3YVKh')
-    .then(response => response.text())
-    .then(url => {
-      document.querySelector('meta[http-equiv="refresh"]').setAttribute('content', `0; url=${url}`);
-    });
-</script>
-  <meta http-equiv="refresh" content="0; url=">
+  <script>
+    setTimeout(function() {
+      window.location.href = 'https://discord.com/invite/glitched-studios';
+    }, 2000); // redirect after 2 seconds
+  </script>
 </body>
 </html>

